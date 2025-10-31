@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Contact | Jia Properties Hub</title><link rel="stylesheet" href="styles.css"></head><body>
+<div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+<header class="header"><nav class="nav"><div class="nav-brand"><span>Jia Properties Hub</span></div><div class="nav-menu" id="navMenu"><a href="index.html" class="nav-link">Home</a><a href="gallery.html" class="nav-link">Gallery</a><a href="about.html" class="nav-link">About Us</a><a href="faq.html" class="nav-link">FAQ</a><a href="contact.html" class="nav-link">Contact</a></div><div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div></nav></header>
+<main class="container" style="padding:140px 20px 60px;">
+  <div class="section-header"><h2>Contact Us</h2><p>Questions? Partnerships? Send us a message.</p></div>
+  <section style="margin-top:2rem; max-width:700px;">
+    <form id="contactForm">
+      <label>Your Name</label><br/><input type="text" id="name" style="padding: 20px;width:100%;margin-bottom:12px;border-radius:8px;border:3px solid #09cee8"/><br/>
+      <label>Your Email</label><br/><input type="email" id="email" style="padding:12px;width:100%;margin-bottom:12px;border-radius:8px;border:3px solid #09cee8"/><br/>
+      <label>Message</label><br/><textarea id="message" rows="6" style="padding:12px;width:100%;margin-bottom:12px;border-radius:8px;border:3px solid #09cee8"></textarea><br/>
+      <button class="btn btn-primary" id="sendBtn">Send Message</button>
+    </form>
+    <p id="contactResult" style="margin-top:12px;color:green;display:none;">Message ready to be sent.</p>
+    
+  </section>
+</main>
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2025 Jia Properties Hub. All rights reserved.</p></div></div></footer>
+<script src="script.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  document.getElementById('contactResult').style.display = 'block';
+});
+</script>
+</body></html>

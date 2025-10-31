@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jia Properties Hub | Where Luxury Meets Comfort</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-brand"><span>Jia Properties Hub</span></div>
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Where Luxury Meets Comfort.</h1>
+        <p class="hero-subtitle">Your plug for amazing apartments, cozy hostels, and unique Airbnb experiences in Uganda.</p>
+
+        <div class="search-container">
+          <div class="search-tabs">
+            <button class="search-tab active" data-type="apartments">Apartments</button>
+            <button class="search-tab" data-type="hostels">Hostels</button>
+            <button class="search-tab" data-type="airbnb">Airbnb</button>
+          </div>
+
+          <div class="search-form">
+            <div class="search-field"><i class="fas fa-map-marker-alt"></i><input type="text" placeholder="Where are you going?" id="location"></div>
+            <div class="search-field"><i class="fas fa-calendar"></i><input type="date" id="checkin"></div>
+            <div class="search-field"><i class="fas fa-calendar"></i><input type="date" id="checkout"></div>
+            <div class="search-field"><i class="fas fa-users"></i>
+              <select id="guests">
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4+ Guests</option>
+              </select>
+            </div>
+            <button class="btn btn-search"><i class="fas fa-search"></i> Search</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="images\88.jpg" alt="Modern apartment interior">
+      </div>
+    </section>
+
+    <!-- Available Properties -->
+    <section id="properties" class="featured-properties">
+      <div class="container">
+        <div class="section-header">
+          <h2>Available Properties</h2>
+          <p>Accommodations for your perfect stay, picked just for you</p>
+        </div>
+
+        <div class="property-grid">
+          <!-- Property 1 -->
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images\4.jpg" alt="Luxury Apartment">
+              <div class="property-badge">Apartment</div>
+              <button class="property-favorite"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="property-content">
+              <div class="property-location"><i class="fas fa-map-marker-alt"></i> Bunga, Soya</div>
+              <h3 class="property-title">Luxury Bunga Apartment</h3>
+              <div class="property-features">
+                <span><i class="fas fa-bed"></i> 2 Beds</span>
+                <span><i class="fas fa-bath"></i> 2 Baths</span>
+                <span><i class="fas fa-wifi"></i> WiFi</span>
+              </div>
+              <div class="property-price"><span class="price">UGX 250,000</span><span class="period">/night</span></div>
+            </div>
+          </div>
+
+          <!-- Property 2 -->
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images\8.jpg" alt="Hostel">
+              <div class="property-badge hostel">Hostel</div>
+              <button class="property-favorite"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="property-content">
+              <div class="property-location"><i class="fas fa-map-marker-alt"></i> Seguku, Entebbe</div>
+              <h3 class="property-title">Central Entebbe Hostel</h3>
+              <div class="property-features">
+                <span><i class="fas fa-users"></i> Shared</span>
+                <span><i class="fas fa-utensils"></i> Kitchen</span>
+                <span><i class="fas fa-wifi"></i> WiFi</span>
+              </div>
+              <div class="property-price"><span class="price">UGX 100,000</span><span class="period">/night</span></div>
+            </div>
+          </div>
+
+          <!-- Property 3 -->
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images\6.jpg" alt="Villa">
+              <div class="property-badge airbnb">Airbnb</div>
+              <button class="property-favorite"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="property-content">
+              <div class="property-location"><i class="fas fa-map-marker-alt"></i> Munyonyo</div>
+              <h3 class="property-title">Lake Victoria View Villa</h3>
+              <div class="property-features">
+                <span><i class="fas fa-bed"></i> 4 Beds</span>
+                <span><i class="fas fa-swimming-pool"></i> Pool</span>
+                <span><i class="fas fa-parking"></i> Parking</span>
+              </div>
+              <div class="property-price"><span class="price">UGX 450,000</span><span class="period">/night</span></div>
+            </div>
+          </div>
+
+          <!-- Property 4 -->
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images\lux.jpeg" alt="Studio apartment">
+              <div class="property-badge">Apartment</div>
+              <button class="property-favorite"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="property-content">
+              <div class="property-location"><i class="fas fa-map-marker-alt"></i> Kololo</div>
+              <h3 class="property-title">Studio Apartment</h3>
+              <div class="property-features">
+                <span><i class="fas fa-bed"></i> 1 Bed</span>
+                <span><i class="fas fa-bath"></i> 1 Bath</span>
+                <span><i class="fas fa-utensils"></i> Kitchen</span>
+              </div>
+              <div class="property-price"><span class="price">UGX 120,000</span><span class="period">/night</span></div>
+            </div>
+          </div>
+
+          <!-- Property 5 -->
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images\12.jpg" alt="Girls Hostel">
+              <div class="property-badge hostel">Hostel</div>
+              <button class="property-favorite"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="property-content">
+              <div class="property-location"><i class="fas fa-map-marker-alt"></i> Nakasero</div>
+              <h3 class="property-title">Girls' Hostel</h3>
+              <div class="property-features">
+                <span><i class="fas fa-female"></i> Girls only</span>
+                <span><i class="fas fa-bath"></i> Shared Bath</span>
+                <span><i class="fas fa-wifi"></i> WiFi</span>
+              </div>
+              <div class="property-price"><span class="price">UGX 80,000</span><span class="period">/night</span></div>
+            </div>
+          </div>
+
+          <!-- Property 6 -->
+          <div class="property-card">
+            <div class="property-image">
+              <img src="images\7.jpg" alt="Treehouse">
+              <div class="property-badge airbnb">Airbnb</div>
+              <button class="property-favorite"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="property-content">
+              <div class="property-location"><i class="fas fa-map-marker-alt"></i> Bwindi Impenetrable National Park, Kisoro</div>
+              <h3 class="property-title">Treehouse</h3>
+              <div class="property-features">
+                <span><i class="fas fa-bed"></i> 2 Beds</span>
+                <span><i class="fas fa-leaf"></i> Nature</span>
+                <span><i class="fas fa-fire"></i> Fireplace</span>
+              </div>
+              <div class="property-price"><span class="price">UGX 200,000</span><span class="period">/night</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Jia Properties Hub -->
+    <section class="why-choose-us">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose Jia Properties Hub?</h2>
+          <p>We make finding your perfect accommodation luxurious, affordable with amazing views.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-lock"></i></div>
+            <h3>Secure Booking</h3>
+            <p>Your payments are protected with bank-level security and instant confirmation.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-search"></i></div>
+            <h3>Easy Search</h3>
+            <p>Find exactly what you're looking for with our advanced filtering system.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-headset"></i></div>
+            <h3>24/7 Support</h3>
+            <p>Our customer service team is always ready to help you with any questions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-brand"><span>Jia Properties Hub</span></div>
+          <p>Find your perfect stay with confidence. From luxury apartments to budget hostels, we've got you covered.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Property Types</h4>
+          <ul>
+            <li><a href="#">Apartments</a></li>
+            <li><a href="#">Hostels</a></li>
+            <li><a href="#">Airbnb</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 Jia Properties Hub. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
