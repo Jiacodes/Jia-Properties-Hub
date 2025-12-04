@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "question": "How do I book a property?",
+    "answer": "Booking is simple! Browse our listings, select your preferred property, choose your dates and number of guests, then click 'Book Now'. You'll receive instant confirmation via email with all the details you need.",
+    "category": "booking"
+  },
+  {
+    "id": "2",
+    "question": "What payment methods do you accept?",
+    "answer": "We accept Mobile Money (MTN, Airtel), bank transfers, Visa/Mastercard credit and debit cards, and PayPal. All payments are processed securely with bank-level encryption.",
+    "category": "payment"
+  },
+  {
+    "id": "3",
+    "question": "What is your cancellation policy?",
+    "answer": "Cancellations made 48 hours or more before check-in receive a full refund. Cancellations within 48 hours receive a 50% refund. No-shows are non-refundable. Some special properties may have different policies clearly stated on their listing.",
+    "category": "booking"
+  },
+  {
+    "id": "4",
+    "question": "Are the properties verified?",
+    "answer": "Yes! Every property on Jia Properties Hub is personally verified by our team. We conduct in-person inspections to ensure accuracy of photos, amenities, and safety standards before listing.",
+    "category": "trust"
+  },
+  {
+    "id": "5",
+    "question": "What are your customer support hours?",
+    "answer": "Our customer support team is available 24/7. You can reach us via WhatsApp, phone call, or email. For urgent matters during your stay, we have a dedicated emergency hotline.",
+    "category": "support"
+  },
+  {
+    "id": "6",
+    "question": "Can I book for someone else?",
+    "answer": "Absolutely! During the booking process, you can specify the guest's name and contact details. The confirmation and check-in instructions will be sent to both you and the guest.",
+    "category": "booking"
+  },
+  {
+    "id": "7",
+    "question": "Do you offer airport transfers?",
+    "answer": "Yes, we partner with trusted transportation providers to offer airport pickup and drop-off services. This can be arranged during booking or by contacting our support team at least 24 hours before your arrival.",
+    "category": "services"
+  },
+  {
+    "id": "8",
+    "question": "What happens if there's a problem with my accommodation?",
+    "answer": "Your satisfaction is our priority. If you encounter any issues, contact us immediately through the app or our 24/7 hotline. We'll work to resolve the issue or arrange alternative accommodation if necessary.",
+    "category": "support"
+  },
+  {
+    "id": "9",
+    "question": "Are pets allowed in the properties?",
+    "answer": "Pet policies vary by property. Each listing clearly indicates whether pets are welcome. When allowed, there may be a small additional cleaning fee. Always confirm with us before booking if you plan to bring a pet.",
+    "category": "policies"
+  },
+  {
+    "id": "10",
+    "question": "How early can I check in?",
+    "answer": "Standard check-in time is 2:00 PM, with check-out by 11:00 AM. Early check-in and late check-out can often be arranged for a small fee, subject to availability. Contact us to make arrangements.",
+    "category": "booking"
+  }
+]

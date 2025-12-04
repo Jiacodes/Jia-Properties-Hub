@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Navy Blue & Burgundy Theme */
+    --background: 220 20% 97%;
+    --foreground: 220 56% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 56% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 56% 15%;
+
+    /* Navy Blue Primary */
+    --primary: 220 56% 20%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 220 56% 35%;
+    --primary-dark: 220 56% 12%;
+
+    /* Burgundy Accent */
+    --accent: 350 60% 35%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 350 50% 45%;
+    --accent-dark: 350 70% 25%;
+
+    --secondary: 220 20% 94%;
+    --secondary-foreground: 220 56% 20%;
+
+    --muted: 220 15% 90%;
+    --muted-foreground: 220 15% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 350 60% 35%;
+
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(220 56% 15% / 0.85), hsl(350 60% 25% / 0.75));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 20% 98%));
+    --gradient-accent: linear-gradient(135deg, hsl(350 60% 35%), hsl(350 50% 45%));
+    --gradient-navy: linear-gradient(135deg, hsl(220 56% 20%), hsl(220 56% 30%));
+    
+    --shadow-sm: 0 1px 2px hsl(220 56% 15% / 0.05);
+    --shadow-md: 0 4px 12px hsl(220 56% 15% / 0.08);
+    --shadow-lg: 0 10px 30px hsl(220 56% 15% / 0.12);
+    --shadow-xl: 0 20px 50px hsl(220 56% 15% / 0.15);
+    --shadow-glow: 0 0 40px hsl(350 60% 35% / 0.2);
+    --shadow-card-hover: 0 20px 40px hsl(220 56% 15% / 0.18);
+    
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .dark {
+    --background: 220 30% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 30% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 30% 10%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 220 45% 70%;
+    --primary-foreground: 220 56% 10%;
+    --primary-light: 220 45% 80%;
+    --primary-dark: 220 45% 60%;
+
+    --accent: 350 55% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 350 50% 65%;
+    --accent-dark: 350 60% 45%;
+
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 220 15% 90%;
+
+    --muted: 220 25% 20%;
+    --muted-foreground: 220 15% 60%;
+
+    --border: 220 25% 22%;
+    --input: 220 25% 22%;
+    --ring: 350 55% 55%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(220 30% 5% / 0.95), hsl(350 40% 15% / 0.9));
+    --gradient-card: linear-gradient(180deg, hsl(220 30% 12%), hsl(220 30% 10%));
+    --gradient-accent: linear-gradient(135deg, hsl(350 55% 50%), hsl(350 50% 60%));
+    --gradient-navy: linear-gradient(135deg, hsl(220 45% 65%), hsl(220 45% 75%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300;
+  }
+
+  .glass-card-hover:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  .text-gradient-navy {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-navy);
+  }
+
+  .btn-accent {
+    @apply relative overflow-hidden rounded-xl px-6 py-3 font-semibold text-accent-foreground;
+    background-image: var(--gradient-accent);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+  }
+
+  .btn-accent:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  .btn-navy {
+    @apply relative overflow-hidden rounded-xl px-6 py-3 font-semibold text-primary-foreground;
+    background-image: var(--gradient-navy);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+  }
+
+  .btn-navy:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  .nav-link {
+    @apply relative px-4 py-2 font-medium transition-colors duration-300;
+  }
+
+  .nav-link::after {
+    @apply absolute bottom-0 left-1/2 h-0.5 w-0 bg-accent -translate-x-1/2 transition-all duration-300 content-[''];
+    border-radius: 2px;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    @apply w-full;
+  }
+
+  .nav-link.active {
+    @apply text-accent;
+  }
+
+  .property-tag {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wider;
+  }
+
+  .property-tag-apartment {
+    @apply property-tag bg-primary/10 text-primary;
+  }
+
+  .property-tag-hostel {
+    @apply property-tag bg-accent/10 text-accent;
+  }
+
+  .property-tag-airbnb {
+    @apply property-tag bg-emerald-500/10 text-emerald-600;
+  }
+
+  .property-tag-villa {
+    @apply property-tag bg-amber-500/10 text-amber-600;
+  }
+
+  .property-tag-studio {
+    @apply property-tag bg-sky-500/10 text-sky-600;
+  }
+
+  .property-tag-commercial {
+    @apply property-tag bg-indigo-500/10 text-indigo-600;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+    font-family: var(--font-heading);
+  }
+
+  .section-subheading {
+    @apply text-lg md:text-xl text-muted-foreground max-w-2xl;
+  }
+
+  /* Masonry Grid */
+  .masonry-grid {
+    @apply columns-1 sm:columns-2 lg:columns-3 gap-4;
+  }
+
+  .masonry-item {
+    @apply break-inside-avoid mb-4;
+  }
+
+  /* Accordion Animation */
+  .accordion-content {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  }
+
+  .accordion-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .accordion-content.expanded {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+}
